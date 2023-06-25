@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.flywaydb:flyway-mysql'
     runtimeOnly "software.aws.rds:aws-mysql-jdbc:1.1.7"

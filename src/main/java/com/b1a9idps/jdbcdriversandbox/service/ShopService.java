@@ -17,9 +17,10 @@ public class ShopService {
     private final ShopRepository shopRepository;
 
     @Transactional
-    public void create() {
+    public Integer create() {
         var shop = shopRepository.save(new Shop("shop-name"));
         log.info("saved shop.(id = {})", shop.getId());
+        return shop.getId();
     }
 
 }
