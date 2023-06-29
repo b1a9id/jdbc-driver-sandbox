@@ -1,7 +1,9 @@
 package com.b1a9idps.jdbcdriversandbox.controller;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +26,11 @@ public class ShopController {
         var id = shopService.create();
         log.info("saved shop.(id = {})", id);
         return Map.of("id", id);
+    }
+
+    @GetMapping
+    public Map<String, Integer> list() {
+        return shopService.list().stream()
+                .collect(Collectors.toUnmodifiableMap(v -> "id", Integer::intValue));
     }
 }
