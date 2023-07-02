@@ -31,6 +31,6 @@ public class ShopController {
     @GetMapping
     public Map<String, Integer> list() {
         return shopService.list().stream()
-                .collect(Collectors.toUnmodifiableMap(v -> "id", Integer::intValue));
+                .collect(Collectors.toUnmodifiableMap(v -> "id" + v, Integer::intValue));
     }
 }
