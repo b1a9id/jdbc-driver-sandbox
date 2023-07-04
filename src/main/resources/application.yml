@@ -1,8 +1,4 @@
 spring:
   datasource:
-    url: jdbc:mysql:replication:aws://${DB_URL:localhost:23306},${RO_DB_URL:localhost:23306}/test_db
     username: root
     password: rootroot
-    driver-class-name: software.aws.rds.jdbc.mysql.Driver
-  jpa:
-    show-sql: true

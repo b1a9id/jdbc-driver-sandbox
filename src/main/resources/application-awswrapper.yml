@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:aws-wrapper:mysql://${DB_URL:localhost:23306}/test_db
+    username: root
+    password: rootroot
+    driver-class-name: software.amazon.jdbc.Driver
+    hikari:
+      data-source-properties:
+        wrapperPlugins: readWriteSplitting,failover,efm
+        failoverMode: reader-or-writer
+      exception-override-class-name: software.amazon.jdbc.util.HikariCPSQLException
+logging:
+  level:
+    software.amazon.jdbc.Driver: trace
+    software.amazon.jdbc.plugin.readwritesplitting: trace
+    software.amazon.jdbc.plugin.staledns: trace
+    software.amazon.jdbc.plugin.failover: trace

@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    url: jdbc:mysql:replication://${DB_URL:localhost:23306},${RO_DB_URL:localhost:23306}/test_db
