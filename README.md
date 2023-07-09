@@ -5,7 +5,7 @@ JDBC ドライバーの検証
 - Java 17
 - Spring Boot 3.1.0
 - aws-mysql-jdbc 1.1.7
-- aws-advanced-jdbc-wrapper: 2.2.2
+- aws-advanced-jdbc-wrapper 2.2.2
 
 ## 起動方法
 1. 接続先DBのURLを環境変数に設定する。
