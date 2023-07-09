@@ -9,6 +9,7 @@ spring:
         wrapperPlugins: readWriteSplitting,failover,efm
         failoverMode: reader-or-writer
       exception-override-class-name: software.amazon.jdbc.util.HikariCPSQLException
+      maximum-pool-size: 2
 logging:
   level:
     software.amazon.jdbc.Driver: trace
