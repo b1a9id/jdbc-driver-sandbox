@@ -1,8 +1,6 @@
 spring:
   datasource:
     url: jdbc:aws-wrapper:mysql://${DB_URL:localhost:23306}/test_db
-    username: root
-    password: rootroot
     driver-class-name: software.amazon.jdbc.Driver
     hikari:
       data-source-properties:
